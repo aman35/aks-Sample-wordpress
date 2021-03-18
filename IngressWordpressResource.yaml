@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: wpingress
+spec:
+  rules:
+    - http:
+       paths:
+        - path: /
+          backend:
+            serviceName: wpsvc
+            servicePort: 80
